@@ -1,0 +1,25 @@
+loremipsum.content:
+  path: '/loremipsum'
+  defaults:
+    _controller: 'Drupal\loremipsum\Controller\LoremipsumController::content'
+    _title: 'loremipsum Block'
+  requirements:
+    _permission: 'access content'
+loremipsum.firstmodule_form:
+  path: 'admin/config/loremipsum/loremipsum-form'
+  defaults:
+    _form:  '\Drupal\loremipsum\Form\LoremipsumForm'
+    _title: 'Loremipsum Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE 
+loremipsum.customfield.settings:
+  path: '/admin/config/loremipsum/settings/customfield'
+  defaults:
+    _form: '\Drupal\loremipsum\Form\QuestionFields'
+    _title: 'Create Custom Fields'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

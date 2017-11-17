@@ -1,0 +1,11 @@
+loremipsum.admin:
+  title: 'loremipsum module settings'
+  description: 'A basic module to return hello world'
+  parent: system.admin_config_development
+  route_name: loremipsum.content
+  weight: 100
+loremipsum.firstmodule_form:
+  route_name: loremipsum.firstmodule_form
+  title: "loremipsum Module Settings"
+  description: 'loremipsum Module settings forms.'
+  parent: system.admin_config_system
