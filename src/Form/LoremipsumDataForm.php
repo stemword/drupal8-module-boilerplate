@@ -37,7 +37,7 @@ class LoremipsumDataForm extends FormBase {
         $record = $query->execute()->fetchAssoc();
 
     }
-
+   // print_r($record['gender']);exit();
     $form['candidate_name'] = array(
       '#type' => 'textfield',
       '#title' => t('Candidate Name:'),
@@ -73,8 +73,8 @@ class LoremipsumDataForm extends FormBase {
       '#options' => array(
         'Female' => t('Female'),
         'male' => t('Male'),
-        '#default_value' => (isset($record['gender']) && $_GET['num']) ? $record['gender']:'',
         ),
+      '#default_value' => (isset($record['gender']) && $_GET['num']) ? $record['gender']:'',
       );
 
     $form['web_site'] = array (
