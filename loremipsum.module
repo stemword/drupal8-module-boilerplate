@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains loremipsum.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function loremipsum_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the loremipsum module.
+    case 'help.page.loremipsum':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This dispaly information what you enter your application.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function loremipsum_theme() {
+  // We use a template file to allow for translation of blocks of content.
+  // Therefore we need to add this content at the theming layer.
+  return [
+    'loremipsum_description' => [
+      'template' => 'description',
+      'variables' => [],
+    ],
+  ];
+}

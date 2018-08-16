@@ -23,3 +23,37 @@ loremipsum.customfield.settings:
     _permission: 'access administration pages'
   options:
     _admin_route: TRUE
+loremipsum.loremipsum_controller_display:
+  path: '/loremipsumdata'
+  defaults:
+    _controller: '\Drupal\loremipsum\Controller\LoremipsumdataController::display'
+    _title: 'display'
+  requirements:
+    _permission: 'access content'
+
+loremipsum.loremipsum_form:
+  path: '/loremipsum/form/loremipsum'
+  defaults:
+    _form: '\Drupal\loremipsum\Form\LoremipsumDataForm'
+    _title: 'LoremipsumDataForm'
+  requirements:
+    _access: 'TRUE'
+  
+
+loremipsum.display_table_controller_display:
+  path: '/loremipsum/hello/table'
+  defaults:
+    _controller: '\Drupal\loremipsum\Controller\DisplayTableController::display'
+    _title: 'display'
+  requirements:
+    _permission: 'access content'
+
+
+
+loremipsum.delete_form:
+  path: '/loremipsum/form/delete/{cid}'
+  defaults:
+    _form: '\Drupal\loremipsum\Form\DeleteForm'
+    _title: 'DeleteForm'
+  requirements:
+    _access: 'TRUE'
