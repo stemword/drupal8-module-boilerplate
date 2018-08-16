@@ -182,8 +182,6 @@ class LoremipsumDataForm extends FormBase {
                ->execute();
            drupal_set_message("succesfully saved");
            $form_state->setRedirect('loremipsum.display_table_controller_display');
-           //$response = new RedirectResponse("loremipsum/hello/table");
-           //$response->send();
        }
      }
 
