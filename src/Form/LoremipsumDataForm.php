@@ -4,7 +4,7 @@ namespace Drupal\loremipsum\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-
+use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Database\Database;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
@@ -27,7 +27,8 @@ class LoremipsumDataForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-
+    $config = $this->config('loremipsum.api_settings');
+    $site_name = $config->get('loremipsum_site_name');
     $conn = Database::getConnection();
      $record = array();
     if (isset($_GET['num'])) {
