@@ -57,3 +57,11 @@ loremipsum.delete_form:
     _title: 'DeleteForm'
   requirements:
     _access: 'TRUE'
+    
+loremipsum.ajax_example:
+  path: '/ajax_example'
+  defaults:
+    _form: '\Drupal\loremipsum\Form\AjaxExampleForm'
+    _title: 'Ajax Example'
+  requirements:
+    _access: 'TRUE'   
